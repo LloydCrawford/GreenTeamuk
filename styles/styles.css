@@ -35,10 +35,18 @@ div.filter :hover{
 } /* when the user hovers over the circle image it now becomes greyscaled */
 
 div.item { 
-    border-radius: 100%;
     list-style: none;
     align-content: center;
  } /* sets out an area for the in which the media links are located */
+
+
+
+ .imagelinks{
+     height: 100px;
+     width: 40%;
+     margin-top: 10px;
+     margin-left: 13%;
+ }
 
 @media only screen and (max-width:767px){
     nav .item a{
@@ -52,7 +60,6 @@ div.item {
 
                                                                         /* Background Video */
 .header-background{
-    justify-content: center;
     align-items: center;
     background: rgba(0, 0, 0, 0.25);
     background-image: linear-gradient(
@@ -60,22 +67,12 @@ div.item {
         rgba(0, 0, 0, 0.301),
         rgba(61, 61, 61, 0.685)
     );
-    height: 100%;
-    width: 100%;
-    align-items: center;
+    width: 300px;
     overflow: hidden; 
-    margin-top: 150px;
+    margin-left: 300px;
+    left: 50%;
 } /* this sets the backround for where the video will be positioned */
 
-.background-vid{
-    position: fixed;
-    z-index: -1;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    min-width: 100%;
-    min-height: 100%;
-} /* this sets where the video will be placed at the top of the page */
 
 .container {
     text-decoration: none;
@@ -117,11 +114,15 @@ due to the difficulty i was having getting the video to resize for a mobile view
 
                                                                             /* Navigation */
 nav{
-    margin: 20px;
-    margin-top: 0px;
-    left: 50%;
     text-align: center;
 } /* sets margin to 20px for the navigaton */
+
+.naviflex{
+    background: #9a712a;
+    height: 300px;
+    max-width: 50%;
+    border-radius: 15%;
+}
 
 .downloads {
     background-color: lightgray;
@@ -187,7 +188,7 @@ ul{
 }/* this media query adds padding to the list when on a desktop so it sits tighter */
 
 
-                                                                            /* Portofolio Grid Basic code taken from Week 6 Example */
+                                                                            /* Portofolio Grid  */
 
 .grid-image{
     max-width: auto;
@@ -202,15 +203,16 @@ ul{
 
 .grid_portfolio{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     grid-gap: 1.5rem;
     grid-auto-rows: minmax(150px, auto);
     align-items: center;
     margin-left: 20px;
     margin-right: 20px;
+    left: 50%;
 } /* sets the properties for the grid including the columns on the portfolio page*/
 
-.grid_cv{
+.grid_about{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-gap: 1.5rem;
@@ -257,7 +259,6 @@ div.container a {
     margin: 0px 10px;
     position: relative;
     z-index: 1;
-    cursor: none;
     color: aliceblue;
 }
 
@@ -379,10 +380,7 @@ input[type=submit]{
 
                                                                                 /* Layout */
 
-*{
-    padding: 0;
-    margin: 0;
-}/* sets the standard padding and margins to 0 */
+
 
 head{
     margin-top: 1rem;
@@ -390,8 +388,14 @@ head{
 } /* sets margin heights for the header */
 
 header{
-    background: #58a946;
-    background-color: #58a94679 
+    background: #58a94679;
+    background-color: #58a94679;
+    background-image: linear-gradient(
+        90deg
+        #58a94679,
+        #7dff6079,
+        #58a94679
+    );
 }
 
 body{
@@ -418,7 +422,7 @@ footer a{
 /* sets spacing for the media icons */
 
 html{
-    background-color:white;
+    background-color:#075c3075;
     cursor: cell;
     text-decoration-color: white;
 } /* sets feautres fo the whole html document including cursor, background colour and gradient */
